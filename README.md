@@ -2,11 +2,77 @@
 
 ### Project Description
 
-Our final project will try to recreate the retro arcade game Asteroids. The player will be a spaceship that flies in space trying to destroy asteroids that exist in the area that they are flying in. The player is able to shoot bullets from their spaceship to destroy asteroids, and has the ability to turn/accelerate the spaceship. Asteroids have constant velocity and fly in one direction. Destroying an asteroid will add to the player’s score and colliding with an asteroid will cause the player to lose the game.
+For our project, we are taking inspiration from a minigame from Wii Party (2010) called “Time Bomb.”  
+
+* Gameplay
+
+* Each person must hold a specific button while passing the board (aka bomb)
+
+* External Components
+
+* Implementation: 
+
+* to the next person as steadily as possible to avoid detonating the bomb. The timer displayed on the bomb resets every time it is successfully passed to the next person. As rounds increase, the timer decreases and the bomb becomes more sensitive to shaking.
+
+* If the bomb shakes too much while passing it onto the next person, both the passer and the receiver lose
+
+* If the receiver presses a wrong input, the receiver loses
+
+* If the passer shakes it too much after receiving the the bomb and before the next input is announced, the passer loses
+
+* Different game modes:
+
+* Another game mode where the timer is shown at the beginning but is then hidden. The timer will continue to count down and players must avoid being the person holding the bomb when the timer reaches zero.
+
+* Elimination game mode where the game continues after someone is out until one person remains
 ### Technical Approach
 
-The game logic itself will be implemented in Python. The player’s controls will be implemented using the board in C. Shooting and accelerating the spaceship will most likely be controlled by buttons on the board. The left and right turning could be implemented by using the gyroscope on the board, so that moving the board in certain ways causes the spaceship to turn left and right. We can calculate the angle of the board to make the spaceship turn faster/slower. Having a leveled board means that the ship won’t turn at all.
+* External Components
+
+* Speaker
+
+* 2N3904 NPN BJT for amplification
+
+* https://www.sparkfun.com/products/15350
+
+* Screen (OLED, I2C)
+
+* https://www.sparkfun.com/products/17153 
+
+* Extra buttons
+
+* https://www.sparkfun.com/products/14460
+
+* Switch
+
+* https://www.sparkfun.com/products/9276
+
+* Implementation: 
+
+* All C code/software contained on board. 
+
+* With battery pack, the board does not need to be connected to computer
+
+* OLED screen to display information with I2C.
+
+* Speaker to play game sounds and give instructions
+
+* On-board accelerometer/gyroscope
+
+* Measures movement/shakiness of board and compares signal to a specific threshold.
+
+* On-board buttons and lights to interact with and signal the state of the game.
+
+* Look into extra buttons/inputs
+
+* Encoders for extra difficulty
+
+* Extra buttons
+
+* Switches
+
+* GPIO pins interacting with the board. Use interrupts for timing with PIT and detecting excessive movement/wrong input.
 ## Your page
-You can access your place holder page on [https://pages.github.coecis.cornell.edu/ece3140-sp2023/dgc68-tc448/](https://pages.github.coecis.cornell.edu/ece3140-sp2023/dgc68-tc448/).
+You can access your place holder page on [https://pages.github.coecis.cornell.edu/ece3140-sp2023/dl634-kz85-lsl95/](https://pages.github.coecis.cornell.edu/ece3140-sp2023/dl634-kz85-lsl95/).
 
 You can edit your page in the gh-page branch of this repo.
