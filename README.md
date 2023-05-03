@@ -2,77 +2,15 @@
 
 ### Project Description
 
-For our project, we are taking inspiration from a minigame from Wii Party (2010) called “Time Bomb.”  
-
-* Gameplay
-
-* Each person must hold a specific button while passing the board (aka bomb)
-
-* External Components
-
-* Implementation: 
-
-* to the next person as steadily as possible to avoid detonating the bomb. The timer displayed on the bomb resets every time it is successfully passed to the next person. As rounds increase, the timer decreases and the bomb becomes more sensitive to shaking.
-
-* If the bomb shakes too much while passing it onto the next person, both the passer and the receiver lose
-
-* If the receiver presses a wrong input, the receiver loses
-
-* If the passer shakes it too much after receiving the the bomb and before the next input is announced, the passer loses
-
-* Different game modes:
-
-* Another game mode where the timer is shown at the beginning but is then hidden. The timer will continue to count down and players must avoid being the person holding the bomb when the timer reaches zero.
-
-* Elimination game mode where the game continues after someone is out until one person remains
+We want to create a morse code lock system using a flashlight and the light sensor. First, the user will set a 3 digit password using the flashlight and with the implementation of morse code, then the user will use the flashlight to unlock it, if the right code is passed in. We will use the LEDs to show if the password is right or wrong and the LCD display will display what digit the user entered. A reset functionality will also be looked into being implemented. 
 ### Technical Approach
 
-* External Components
+We will use a state machine in order to decide if the program is in the lock or unlock state. We will also use the timer handler we have been using throughout the course. An Init function that will set up all devices we need to use to run the project. We will also use a similar lock structure that we have been using in class for projects, helping to store the password. 
 
-* Speaker
+ 
 
-* 2N3904 NPN BJT for amplification
-
-* https://www.sparkfun.com/products/15350
-
-* Screen (OLED, I2C)
-
-* https://www.sparkfun.com/products/17153 
-
-* Extra buttons
-
-* https://www.sparkfun.com/products/14460
-
-* Switch
-
-* https://www.sparkfun.com/products/9276
-
-* Implementation: 
-
-* All C code/software contained on board. 
-
-* With battery pack, the board does not need to be connected to computer
-
-* OLED screen to display information with I2C.
-
-* Speaker to play game sounds and give instructions
-
-* On-board accelerometer/gyroscope
-
-* Measures movement/shakiness of board and compares signal to a specific threshold.
-
-* On-board buttons and lights to interact with and signal the state of the game.
-
-* Look into extra buttons/inputs
-
-* Encoders for extra difficulty
-
-* Extra buttons
-
-* Switches
-
-* GPIO pins interacting with the board. Use interrupts for timing with PIT and detecting excessive movement/wrong input.
+Additional peripherals and features that we will have to use but still looking into solutions for are a handler for the flashlight, a function to convert the Morse code into digits and the implementations for LCD and LEDs.
 ## Your page
-You can access your place holder page on [https://pages.github.coecis.cornell.edu/ece3140-sp2023/dl634-kz85-lsl95/](https://pages.github.coecis.cornell.edu/ece3140-sp2023/dl634-kz85-lsl95/).
+You can access your place holder page on [https://pages.github.coecis.cornell.edu/ece3140-sp2023/dlh275-ges248/](https://pages.github.coecis.cornell.edu/ece3140-sp2023/dlh275-ges248/).
 
 You can edit your page in the gh-page branch of this repo.
