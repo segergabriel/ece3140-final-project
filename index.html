@@ -19,36 +19,17 @@
 <section class="main-content">
  
 <h3>Introduction</h3>
-<p>With security and privacy becoming a more prominent problem in our society, we wanted to create a different kind of lock system. 
-  So, we created a morse code lock system using a flashlight and the light sensor. The system consists of two major sections. First, the 
-  user will set a 3 digit password via morse code, using a flashlight as input. Secondly, the user will be able to unlock the system with the 
-  flashlight if the right password is passed. The LEDs will show if the password is right or wrong, flashing red or green, and the LCD display 
-  will display what digit the user entered.Our project was motivated by the fundamental usefulness and practicality of morse code combined with the 
-  importance of being able to have security features such as password locks. It is important to have a way to implement security even when you have 
-  very few methods of inputs. In certain scenarios, you will not be able to have a full number pad or more than just a few input devices. As a 
-  result we designed our locking mechanism to only use two buttons on the board and be based on the timing of the button press to convert inputs 
-  into morse code which will allow you to enter a password to a lock.</p> 
+<p>With security and privacy becoming a more prominent problem in our society, we wanted to create a different kind of lock system. So, we created a morse code lock system using a flashlight and the light sensor. The system consists of two major sections. First, the user will set a 3 digit password via morse code, using a flashlight as input. Secondly, the user will be able to unlock the system with the flashlight if the right password is passed. The LEDs will show if the password is right or wrong, flashing red or green, and the LCD display will display what digit the user entered.</p> 
 <hr>
 
 <h3>Progress</h3>
 <p> We have met over zoom at two occasions, with most of the time so far being spent on planning our project and set up this website. We believe that we have a good plan moving forward as we have a solid draft for both our diagrams and the code section. We have set up the project and are aware of different peripherals we need to use. So, the next step for us is to start building the project and code, as it will take some time to get everything to work together.</p>
 <hr>  
 
-<h3>System Overview</h3>
-<p>The system works by first having the user use SW3 to enter a 4 digit passcode. The code is entered in morse code with a dot being signified by a short 
-  button press and dash being signified by a longer button press. Waiting an interval of approximately 1 second or more signifies that a new number is being 
-  entered. The converted morse code will be shown as a digit on the LCD. After the full passcode is recorded using SW3, it can be entered by pressing SW1 one
-  time. This will set the passcode and lock the “gate” while turning on a red light, indicating that the system is locked. From there, the user can enter 
-  passcodes and if the passcode is correct, it will toggle the gate and the green LED will turn on, if not the gate will not change. </p>
+<h3>System Overview (Draft)</h3>
+<p>We will use a state machine in order to decide if the program is in the lock or unlock state. We will also use the timer handler we have been using throughout the course. Additionally, we will have an Init function that will set up all devices we need to run the project. We will also use a similar lock structure that we have been using in class for projects, which will help to store the password. Our code will be written in C and GitHub will be used as a contol system and to monitor this website. </p>
+<p>To register user input, we will use a flashlight to input the morse code. A short flash (<1s) will be a dot and a longer flash (>2s) will be a dash. These will be displayed as the morse digit on the LCD, to help the user. When the password is set, the user can unlock the system by plugging in the same combination. The Green LED will flash if the password is right, otherwise the red LED will flash. </p>
 <hr>
-  
-<h3>What We Learned</h3>
- <p>We have learned how to use a Finite State Machine to keep track of the state of our lock. Additionally, we have learned how to initialize and 
-   set up PIT interrupts to keep track of a global time variable. This project also allowed us to learn how to detect button presses using interrupts and 
-   be able to map these button presses to an LCD screen which we learned how to set up and use</p>
- <hr>
-  
-  
  
 <h3>Project Video Demo</h3>
 <hr>
@@ -57,14 +38,9 @@
 <h3>Additional Resources Used</h3>
 <hr>
 <h3>Work Distribution</h3>
-  <p>We mostly collaborated via text and Zoom as we couldn't find a common time to work in person for the majority of the project due to other obligations. 
-    We were still able to collaborate and communicate effectively as we had daily contact regarding updates. Fortunately, we managed to get together in the last
-    two days to produce the video and debug it together. We began the project via Zoom, where we both contributed with ideas and roughly planned the project. 
-    We then continued to do a great deal of coding during our zoom meetings, which began last week and continued through the weekend. Dakari had the board, 
-    but we reviewed any code we designed  together online. Both took an active role in writing test cases and working with the web page. Other than Zoom and text,
-    we used Google Drive and Github to share code with each other. 
-</p>
 <hr>
+  
+
 <ul>
 <li>A Descriptive Project Name</li>
 <li>Introduction</li>
@@ -74,6 +50,7 @@
 <li>Additional Resources Used</li>
 <li>Work Distribution (skip if you work by yourself)</li>
 </ul>
+
 <hr>
 <h3> Project Video Demo </h3> 
 Here is a more detailed breakdown of what the different sections should have. 
@@ -85,6 +62,7 @@ Here is a more detailed breakdown of what the different sections should have.
 <li>Include any necessary background information.</li>
 <li>Summary of what you have accomplished and what you have learned.</li>
 </ol>
+
 <h4> System Overview and diagram </h4>
 Give a high-level description of how the system works and how the different parts work together. 
 Include a block diagram of the system showing how components interact. This diagram could potentially be replaced by very clear writing. (You don't need the diagram for the web check-in).
@@ -97,6 +75,7 @@ The video should be self-contained, i.e. understandable by someone who has not r
 <li> Show the system working. </li>
 <li> Describe some of the technical details. </li>
 </ol> 
+
 <ul>
 <li> What would be the most interesting piece of information for your fellow students? </li>
 <li> Was there a super tricky bug? </li>
@@ -121,6 +100,7 @@ Talk about how you split up the work and made sure that everyone contributed.
       
       
 </section>
+
   
 </body>
 </html>
