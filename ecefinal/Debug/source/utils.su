@@ -1,0 +1,7 @@
+../source/utils.c:7:6:LED_Initialize	8	static
+../source/utils.c:24:6:LEDRed_Toggle	8	static
+../source/utils.c:32:6:LEDGreen_Toggle	8	static
+../source/utils.c:39:6:LEDRed_On	24	static
+../source/utils.c:54:6:LEDGreen_On	24	static
+../source/utils.c:69:6:LED_Off	24	static
+../source/utils.c:82:6:delay	16	static

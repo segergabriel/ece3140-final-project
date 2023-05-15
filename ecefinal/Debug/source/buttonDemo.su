@@ -1,0 +1,11 @@
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\CMSIS/core_cm0plus.h:733:22:__NVIC_EnableIRQ	16	static
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\CMSIS/core_cm0plus.h:769:22:__NVIC_DisableIRQ	16	static
+../source/buttonDemo.c:52:5:main	8	static
+../source/buttonDemo.c:103:6:operate_switch_polling	8	static
+../source/buttonDemo.c:112:5:compare_arrays	32	static
+../source/buttonDemo.c:121:6:reset_input	8	static
+../source/buttonDemo.c:128:6:tickfct	8	static
+../source/buttonDemo.c:153:6:operate_switch_interrupts	8	static
+../source/buttonDemo.c:186:6:PIT1_Service	8	static
+../source/buttonDemo.c:191:5:morse_to_int	16	static
+../source/buttonDemo.c:226:6:PORTC_PORTD_IRQHandler	16	static

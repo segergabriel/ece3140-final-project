@@ -1,0 +1,15 @@
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\drivers/fsl_slcd.h:376:20:SLCD_StartDisplay	16	static
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\drivers/fsl_slcd.h:426:20:SLCD_SetBackPlanePhase	24	static
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\drivers/fsl_slcd.h:448:20:SLCD_SetFrontPlaneSegments	24	static
+../source/lcd.c:17:6:LCD_TimeDelay	16	static
+../source/lcd.c:26:6:init_lcd	208	static
+../source/lcd.c:85:6:segmentToPinNumber	24	static
+../source/lcd.c:108:6:turnOnSegment	32	static
+../source/lcd.c:118:6:turnOffSegment	32	static
+../source/lcd.c:129:6:clearDigit	24	static
+../source/lcd.c:143:6:displayDigit	24	static
+../source/lcd.c:154:6:displayDecimalPoint	16	static
+../source/lcd.c:160:6:clearDecimalPoint	16	static
+../source/lcd.c:166:6:displayColon	8	static
+../source/lcd.c:172:6:clearColon	8	static
+../source/lcd.c:178:6:clearDisplay	16	static

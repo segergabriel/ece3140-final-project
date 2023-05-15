@@ -1,0 +1,7 @@
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\drivers/fsl_slcd.h:376:20:SLCD_StartDisplay	16	static
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\drivers/fsl_slcd.h:387:20:SLCD_StopDisplay	16	static
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\drivers/fsl_slcd.h:406:20:SLCD_StopBlinkMode	16	static
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\drivers/fsl_slcd.h:426:20:SLCD_SetBackPlanePhase	24	static
+C:\Users\harri\Documents\MCUXpressoIDE_11.7.0_9198\workspace\frdmkl46z_slcd\drivers/fsl_slcd.h:448:20:SLCD_SetFrontPlaneSegments	24	static
+../source/slcd.c:63:13:SLCD_TimeDelay	16	static
+../source/slcd.c:71:5:main	56	static
