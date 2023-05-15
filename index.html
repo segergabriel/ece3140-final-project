@@ -21,9 +21,13 @@
   <h3>Introduction</h3>
     <p>With security and privacy becoming a more prominent problem in our society, we wanted to create a different kind of lock system. 
   So, we created a morse code lock system using a flashlight and the light sensor. The system consists of two major sections. First, the 
-  user will set a 3 digit password via morse code, using a flashlight as input. Secondly, the user will be able to unlock the system with the 
-  flashlight if the right password is passed. The LEDs will show if the password is right or wrong, flashing red or green, and the LCD display 
-  will display what digit the user entered.</p>
+  user will set a 4 digit password via morse code, using a button as input. Secondly, the user will be able to unlock the system with the 
+  button if the right password is passed. The LEDs will show if the password is right or wrong, flashing red or green, and the LCD display 
+  will display what digit the user entered. Our project was motivated by the fundamental usefulness and practicality of morse code combined 
+  with the importance of being able to have security features such as password locks. It is important to have a way to implement security even 
+      when you have very few methods of inputs. In certain scenarios, you will not be able to have a full number pad or more than just a few input 
+      devices. As a result we designed our locking mechanism to only use two buttons on the board and be based on the timing of the button press 
+      to convert inputs into morse code which will allow you to enter a password to a lock.</p>
     
   <h3>System Overview</h3>  
     <p>The system works by first having the user use SW3 to enter a 4 digit passcode. The code is entered in morse code with a dot being signified by a short 
@@ -50,8 +54,16 @@
        between button presses and how fast the button is pressed. Keeping track of the number of button presses is important because the button needs to 
        be both pressed down <b>and</b> released to count as one input which would be recorded as 2 button presses. As a result, we only wanted to record morse 
        code input when the number of button presses is even.s</p>
+    <h4><b>PIT1_Service():</b></h4>
+    <p>This function is called whenever either SW1 or SW3 is pressed, which triggers an interrupt. Inside this function, we check to see which button 
+      was pressed and act accordingly. If SW3 was pressed, we record if it was a dot or a dash or the beginning of a new number. If it's the beginning
+      of a new number, we record the old number in our code array and start the process of recording a morse code entry again. If SW1 was pressed, that
+      means the user wants to enter the passcode and we call our FSM in order to enter whichever state needs to be entered based on our current state. </p>
     
-    <h4>morse_to_int():</h4>
+    <h4><b>morse_to_int():</b></h4>
+    <p>There are only 10 possible digits that could be entered using the button at a time (0-9). This function takes in an array of 5 dots and dahses (0 and 1's) and converts it to an integer.
+     As a result, the easiest way to convert the array of morse inputs to an integer is to have 10 if statements that check each element of the 
+      morse array and see if a dot or dash was entered. Depending on the order of dots and dashes, the if statements will return the correct integer.</p>
 
     
   </section>
