@@ -42,11 +42,15 @@
     
     <h3>System Description</h3>
     
-    <p>current_time, local_time and button_presses:
+    <h4>current_time, local_time and button_presses:</h4>
  
-      <span>current_time, local_time and button_presses</span>
+     <p>These are global variables that are used to keep track of the time in between button presses and how many button presses have occurred. 
+       The current time is incremented every millisecond by a PIT interrupt that we set up on channel 1 to call the PIT1_Service() function. 
+       The local_time variable is set to the current_time every time SW3 is pressed down or up. This allows us to keep track of the amount of time in
+       between button presses and how fast the button is pressed. Keeping track of the number of button presses is important because the button needs to 
+       be both pressed down <b>and</b> released to count as one input which would be recorded as 2 button presses. As a result, we only wanted to record morse 
+       code input when the number of button presses is even.s</p>
 
-     </p>
     
   </section>
 </html>
