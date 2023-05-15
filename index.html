@@ -64,7 +64,20 @@
     <p>There are only 10 possible digits that could be entered using the button at a time (0-9). This function takes in an array of 5 dots and dahses (0 and 1's) and converts it to an integer.
      As a result, the easiest way to convert the array of morse inputs to an integer is to have 10 if statements that check each element of the 
       morse array and see if a dot or dash was entered. Depending on the order of dots and dashes, the if statements will return the correct integer.</p>
-
+    
+    <h4><b>LCD Library:</b></h4>
+    <p>Making use of the LCD Library was not too difficult. We had to make sure we installed the correct drivers and imported the LCD.c and LCD.h files in 
+      order to use the given functions. Once this was done, we were able to display the numbers we wanted to the LCD by simply calling init_lcd() and then 
+      display_digit() for each digit that we wanted to display after it was translated from morse code.</p>
+    
+    <h3>Testing</h3>
+    <p>This project had multiple steps of testing that needed to occur. The first step was making sure that the “code” array had the correct code in it after 
+      entering the code in morse code. This was done by using the debugger to monitor the global variable “code” and make sure that the correct number was in the 
+      array after each number was entered in morse code. We tried every number and repeats of the same number in order to try to account for edge cases and make 
+      sure we could convert every number from morse code to an integer correctly. 
+	  Then after we were confident that the “code” array had the correct value, we started displaying the integers of the code on the LCD screen. Once this was added, 
+      we performed the same tests and made sure that each integer appeared on the screen correctly as it was entered in morse code.
+</p>
     
   </section>
 </html>
