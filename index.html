@@ -85,12 +85,17 @@
       display_digit() for each digit that we wanted to display after it was translated from morse code.</p>
     
     <h3>Testing</h3>
-    <p>This project had multiple steps of testing that needed to occur. The first step was making sure that the “code” array had the correct code in it after 
-      entering the code in morse code. This was done by using the debugger to monitor the global variable “code” and make sure that the correct number was in the 
-      array after each number was entered in morse code. We tried every number and repeats of the same number in order to try to account for edge cases and make 
-      sure we could convert every number from morse code to an integer correctly. 
-	  Then after we were confident that the “code” array had the correct value, we started displaying the integers of the code on the LCD screen. Once this was added, 
-      we performed the same tests and made sure that each integer appeared on the screen correctly as it was entered in morse code.</p>
+    <p>This project had multiple steps of testing that needed to occur. The first step was making sure that the “code” array had the correct code in it
+	    after entering the code in morse code. This was done by using the debugger to monitor the global variable “code” and make sure that the 
+	    correct number was in the array after each number was entered in morse code. We tried every number and repeats of the same number in order to
+	    try to account for edge cases and make sure we could convert every number from morse code to an integer correctly. We also tried cases where 
+	    the input would be invalid.</p>
+	<p>After we were confident that the “code” array had the correct value, we started displaying the integers of the code on the LCD screen. Once this
+	    was added, we performed the same tests and made sure that each integer appeared on the screen correctly as it was entered in morse code. To 
+	    make it more robust, we added some print statements that printed which button that was pressed and what the current input was. Finally, we 
+	    tested the locking and unlocking functionalities. This was done by stepping through the debugger again while also making sure that the LEDs 
+	    output were correct.</p>
+
  
 <h3>Additional Resources Used</h3>
 	<p>We read input from the SW1 button using the switch_demo.c code that was provided to us. We also used the LCD Library that was provided to us in order to display the 
