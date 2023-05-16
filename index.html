@@ -64,6 +64,13 @@
     <p>There are only 10 possible digits that could be entered using the button at a time (0-9). This function takes in an array of 5 dots and dahses (0 and 1's) and converts it to an integer.
      As a result, the easiest way to convert the array of morse inputs to an integer is to have 10 if statements that check each element of the 
       morse array and see if a dot or dash was entered. Depending on the order of dots and dashes, the if statements will return the correct integer.</p>
+	  
+	<h4><b>Tickfct() (FSM):</b></h4>
+	<p> This function acted as our Finite State Machine. This is the function that we loop through while waiting for interrupts to occur. There are 3 possible 
+		states that we could be in. The states are Reset, Locked and Unlocked. If we start in the reset state and SW1 has been pressed, we switch to the 
+		locked state. If we are in the locked state and the input code matches the code that has been set, we switch to the unlocked state and reset the 
+		input code. If we were in the unlocked state and the input code matches the code that had been set, we switch to the locked state and reset the 
+		input code.</p>
     
     <h4><b>LCD Library:</b></h4>
     <p>Making use of the LCD Library was not too difficult. We had to make sure we installed the correct drivers and imported the LCD.c and LCD.h files in 
@@ -86,7 +93,7 @@
 	 began last week and continued through the weekend. Dakari had the board, but we reviewed any code we designed  together online. Both took 
 	 an active role in writing test cases and working with the web page. Other than Zoom and text, we used Google Drive and Github to share code 
 	 with each other. 
-</p>
+	  </p>
     
   </section>
 </html>
