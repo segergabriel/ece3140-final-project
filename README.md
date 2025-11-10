@@ -6,4 +6,4 @@ We created a Morse code lock system using a flashlight and light sensor. Users s
 
 We implemented a state machine to handle lock/unlock states, with a timer and device initialization. Handlers convert flashlight signals to Morse code, store passwords, and update LEDs and LCD.
 
-## Project Page: https://pages.github.coecis.cornell.edu/ece3140-sp2023/dlh275-ges248
+## Project Page: https://segergabriel.github.io/ece3140-final-project/
